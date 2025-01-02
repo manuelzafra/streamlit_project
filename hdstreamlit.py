@@ -54,7 +54,6 @@ def main():
         else:
             sub_df = exercises
             
-        # Calcular progreso solo si existe la columna Tags
       # Calcular progreso solo si existe la columna Tags
         if "Tags" in exercises.columns:
             try:
@@ -78,7 +77,7 @@ def main():
             st.progress(progress / 100)
             if st.button(f"Ver {subproject}"):
                 st.session_state["current_subproject"] = subproject
-                st.experimental_rerun()
+                st.rerun()  # Cambiamos experimental_rerun() por rerun()
 
     # Página de subproyecto
     if "current_subproject" in st.session_state:
