@@ -30,7 +30,7 @@ def main():
     required_columns = {
         "Subfield/Document": "Nombre del subproyecto",
         "Exercise Title": "Título del ejercicio",
-        "Section / Body District": "Sección del cuerpo",
+        "Section/Body District": "Sección del cuerpo",
         "Skill/Difficulty": "Nivel de dificultad",
         "GIF/Video link": "Enlace al video",
         "Tags": "Etiquetas"
