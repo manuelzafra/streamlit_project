@@ -55,12 +55,20 @@ def main():
             sub_df = exercises
             
         # Calcular progreso solo si existe la columna Tags
+      # Calcular progreso solo si existe la columna Tags
         if "Tags" in exercises.columns:
-            completed = sub_df[sub_df["Tags"].str.contains("completado", na=False)].shape[0]
+            try:
+                # Convertir la columna Tags a string
+                sub_df["Tags"] = sub_df["Tags"].astype(str)
+                completed = sub_df[sub_df["Tags"].str.contains("completado", na=False)].shape[0]
+            except:
+                completed = 0
+                st.warning("Error al procesar las etiquetas. No se mostrará el progreso correctamente.")
         else:
             completed = 0
             st.info("No se encontró la columna 'Tags'. No se mostrará el progreso.")
-            
+        # HASTA AQUÍ
+
         total = sub_df.shape[0]
         progress = (completed / total) * 100 if total > 0 else 0
 
