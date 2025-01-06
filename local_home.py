@@ -89,11 +89,11 @@ st.markdown("""
 
 # Cargar variables de entorno
 #Para la versión local
-#load_dotenv()
-#GOOGLE_SHEET_CSV_URL = os.getenv("GOOGLE_SHEET_CSV_URL")
+load_dotenv()
+GOOGLE_SHEET_CSV_URL = os.getenv("GOOGLE_SHEET_CSV_URL")
 
 # Para la versión deployada
-GOOGLE_SHEET_CSV_URL = st.secrets["GOOGLE_SHEET_CSV_URL"]
+#GOOGLE_SHEET_CSV_URL = st.secrets["GOOGLE_SHEET_CSV_URL"]
 
 # Verificar si se cargó correctamente la URL
 if not GOOGLE_SHEET_CSV_URL:
