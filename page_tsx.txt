@@ -1,0 +1,34 @@
+import { ExerciseCard } from '@/components/ExerciseCard'
+
+export default function Home() {
+  const exerciseData = {
+    sectionInfo: {
+      left: "Warm-up",
+      right: "Beginner",
+    },
+    exerciseInfo: {
+      order: "1.2",
+      name: "Jumping Jacks",
+      videoDuration: "00:16",
+    },
+    gifUrl: "/placeholder.svg?height=300&width=400",
+    rsqsms: {
+      reps: "20",
+      sets: "3",
+      quantity: "N/A",
+      speed: "Moderate",
+      movement: "Full body",
+      stability: "Dynamic",
+    },
+    description: "Jumping jacks are a classic cardiovascular exercise that engages multiple muscle groups. Start with your feet together and arms at your sides, then jump and spread your legs while raising your arms above your head. Jump again to return to the starting position.",
+    tags: ["Cardio", "Full Body", "No Equipment"],
+    notes: "Remember to land softly and maintain a steady rhythm. If you have any joint issues, consider doing low-impact jumping jacks by stepping out instead of jumping.",
+  }
+
+  return (
+    <main className="container mx-auto py-8">
+      <ExerciseCard {...exerciseData} />
+    </main>
+  )
+}
+
