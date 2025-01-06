@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 from typing import Literal
 
-#Par ejecutar este script escribri streamlit run home.py 
+#Par ejecutar este script escribri streamlit run local_home.py 
 
 # Configuración sticky headers
 MARGINS = {

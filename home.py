@@ -243,7 +243,7 @@ def exercise_card(exercise_data):
             if pd.notna(exercise_data['gif_url']) and exercise_data['gif_url'] != 'no_gif_available':
                 st.markdown('<div class="gif-container">', unsafe_allow_html=True)
                 try:
-                    st.image(exercise_data['gif_url'], use_column_width=True)
+                    st.image(exercise_data['gif_url'], use_container_width=True)
                 except Exception as e:
                     st.warning(f"No se pudo cargar el GIF. Mostrando video alternativo.")
                     with st.expander("Ver Video"):
